@@ -55,7 +55,7 @@ def analyze_resume_bytes(file_bytes: bytes, filename: str, client: genai.Client)
         raise ValueError("Unsupported format")
 
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-1.5-flash",
         contents=content_input,
         config=types.GenerateContentConfig(
             response_mime_type="application/json",
